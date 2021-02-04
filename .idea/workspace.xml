@@ -9,7 +9,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a440138-5a35-4577-ab59-04c3ac1abcca" name="Default Changelist" comment="" />
+    <list default="true" id="4a440138-5a35-4577-ab59-04c3ac1abcca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/11.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
