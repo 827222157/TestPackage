@@ -924,3 +924,39 @@ def proguard_rules(){
     return "proguard-rules.pro"
 }
 
+例如：
+
+    public class DownloadHelper {
+
+        public MtDLInfoListener DL_LISTENER = new MtDLInfoListener() {
+
+            @Override
+            public void onDownloadConfirm(Activity activity, final MtDLConfirmCallback mtDLConfirmCallback) {
+                data.fetchDownloadInfo(new DLInfoCallback() {//在onDownloadConfirm回调以后 获取应用信息 6 要素
+                    @Override
+                    public void infoLoaded(ApkInfo s) {
+                        Log.e("testpex", "fetch download info->"+s);
+                    }
+                });
+                ApkInfo info = getAppInfoFromJson(s);
+                showApkInfoDialog(info, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if(mtDLConfirmCallback != null){
+                            mtDLConfirmCallback.confirm();//确认下载
+                        }
+                    }
+                }, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if(mtDLConfirmCallback != null){
+                            mtDLConfirmCallback.cancel();//取消下载
+                        }
+                    }
+                });
+            }
+        };
+
+    }
+
+
