@@ -38,7 +38,7 @@
         - [1、常量类MtConstant](#1常量类mtconstant)
 - [十二、PAI sdk常见错误码](#十二pai-sdk常见错误码)
 
-- [PAI sdk修改包名](#Gradle 修改包名)
+- [sdk修改包名](#Gradle-修改包名)
 
 
 
@@ -889,8 +889,8 @@ MtSDK.init(this, config);
 |1007| 当前页面不可见         |banner，开屏广告当前页面不可见导致无返回|
 
 ### Gradle 修改包名
-1、执行脚本前需要对修改包名的module 进行目标包名的修改 在要修改的module 下的build.gradle 下进行修改 如下
-2、执行Gradle 脚本命令修改包名 Gradle -q copyFile
+    1、执行脚本前需要对修改包名的module 进行目标包名的修改 在要修改的module 下的build.gradle 下进行修改 如下
+    2、执行Gradle 脚本命令修改包名 Gradle -q copyFile
 
 ```
  复制代码的目录
