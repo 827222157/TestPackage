@@ -889,40 +889,41 @@ MtSDK.init(this, config);
 |1007| 当前页面不可见         |banner，开屏广告当前页面不可见导致无返回|
 
 ### Gradle 修改包名
-执行Gradle 脚本命令修改包名 Gradle -q copyFile
-
+1、执行脚本前需要对修改包名的module 进行目标包名的修改 在要修改的module 下的build.gradle 下进行修改 如下
+2、执行Gradle 脚本命令修改包名 Gradle -q copyFile
 
 ```
-  复制代码的目录
-  def fromPath() {
-      return "src/main/java/com/mitan/sdk"
-  }
-  复制要放到的新目录
-  def intoPath() {
-      return "src/main/java/com/qqkj/sdk"
-  }
-  删除以前的目录
-  def deletePath() {
-      return "vi/src/main/java/com/mitan"
-  }
-  修改前的package
-  def packageName() {
-      return "com.mitan.sdk"
-  }
-  修改后的package
-  def toPackageName() {
-      return "com.qqkj.sdk"
-  }
-  修改前的applicationId
-  def applicationIds() {
-      return "com.mitan.sdk.vi"
-  }
-  修改后的applicationId
-  def toApplicationIds() {
-      return "com.qqkj.sdk.vi"
-  }
-  def proguard_rules(){
-      return "proguard-rules.pro"
-  }
+ 复制代码的目录
+ def fromPath() {
+     return "src/main/java/com/mitan/sdk"
+ }
+ 复制要放到的新目录
+ def intoPath() {
+     return "src/main/java/com/qqkj/sdk"
+ }
+ 删除以前的目录
+ def deletePath() {
+     return "vi/src/main/java/com/mitan"
+ }
+ 修改前的package
+ def packageName() {
+     return "com.mitan.sdk"
+ }
+ 修改后的package
+ def toPackageName() {
+     return "com.qqkj.sdk"
+ }
+ 修改前的applicationId
+ def applicationIds() {
+     return "com.mitan.sdk.vi"
+ }
+ 修改后的applicationId
+ def toApplicationIds() {
+     return "com.qqkj.sdk.vi"
+ }
+ def proguard_rules(){
+     return "proguard-rules.pro"
+ }
+
 ```
 
