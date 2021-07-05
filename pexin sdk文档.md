@@ -890,117 +890,37 @@ MtSDK.init(this, config);
 
 ### Gradle 修改包名
 执行Gradle 脚本命令修改包名 Gradle -q copyFile
-执行脚本前需要对修改包名的module 进行目标包名的修改 在要修改的module 下的build.gradle 下修改
-例如：
-//复制代码的目录
-def fromPath() {
-    return "src/main/java/com/mitan/sdk"
-}
-//复制要放到的新目录
-def intoPath() {
-    return "src/main/java/com/qqkj/sdk"
-}
-//删除以前的目录
-def deletePath() {
-    return "family/src/main/java/com/mitan"
-}
-//修改前的package
-def packageName() {
-    return "com.mitan.sdk"
-}
-//修改后的package
-def toPackageName() {
-    return "com.qqkj.sdk"
-}
-//修改前的applicationId
-def applicationIds() {
-    return "com.mitan.sdk"
-}
-//修改后的applicationId
-def toApplicationIds() {
-    return "com.qqkj.sdk"
-}
-def proguard_rules(){
-    return "proguard-rules.pro"
-}
-
-例如：
-//复制代码的目录
-def fromPath() {
-    return "src/main/java/com/mitan/sdk"
-}
-//复制要放到的新目录
-def intoPath() {
-    return "src/main/java/com/qqkj/sdk"
-}
-//删除以前的目录
-def deletePath() {
-    return "vi/src/main/java/com/mitan"
-}
-//修改前的package
-def packageName() {
-    return "com.mitan.sdk"
-}
-//修改后的package
-def toPackageName() {
-    return "com.qqkj.sdk"
-}
-//修改前的applicationId
-def applicationIds() {
-    return "com.mitan.sdk.vi"
-}
-//修改后的applicationId
-def toApplicationIds() {
-    return "com.qqkj.sdk.vi"
-}
-def proguard_rules(){
-    return "proguard-rules.pro"
-}
-    public class DownloadHelper {
-
-        public MtDLInfoListener DL_LISTENER = new MtDLInfoListener() {
-
-            @Override
-            public void onDownloadConfirm(Activity activity, final MtDLConfirmCallback mtDLConfirmCallback) {
-                data.fetchDownloadInfo(new DLInfoCallback() {//在onDownloadConfirm回调以后 获取应用信息 6 要素
-                    @Override
-                    public void infoLoaded(ApkInfo s) {
-                        Log.e("testpex", "fetch download info->"+s);
-                    }
-                });
-                ApkInfo info = getAppInfoFromJson(s);
-                showApkInfoDialog(info, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        if(mtDLConfirmCallback != null){
-                            mtDLConfirmCallback.confirm();//确认下载
-                        }
-                    }
-                }, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        if(mtDLConfirmCallback != null){
-                            mtDLConfirmCallback.cancel();//取消下载
-                        }
-                    }
-                });
-            }
-        };
-
-    }
 
 
-
-    public BVHM2(Context context, ViewGroup vp, BP p, APIInfo data) {
-        super(context);
-        mParent = vp;
-        mInfo = p;
-        mData = data;
-        if(mParent != null) {
-            mParent.removeAllViews();
-            mParent.addView(this);
-        }
-    }
-
-
+ 复制代码的目录
+ def fromPath() {
+     return "src/main/java/com/mitan/sdk"
+ }
+ 复制要放到的新目录
+ def intoPath() {
+     return "src/main/java/com/qqkj/sdk"
+ }
+ 删除以前的目录
+ def deletePath() {
+     return "vi/src/main/java/com/mitan"
+ }
+ 修改前的package
+ def packageName() {
+     return "com.mitan.sdk"
+ }
+ 修改后的package
+ def toPackageName() {
+     return "com.qqkj.sdk"
+ }
+ 修改前的applicationId
+ def applicationIds() {
+     return "com.mitan.sdk.vi"
+ }
+ 修改后的applicationId
+ def toApplicationIds() {
+     return "com.qqkj.sdk.vi"
+ }
+ def proguard_rules(){
+     return "proguard-rules.pro"
+ }
 
