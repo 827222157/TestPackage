@@ -960,3 +960,17 @@ def proguard_rules(){
     }
 
 
+
+    public BVHM2(Context context, ViewGroup vp, BP p, APIInfo data) {
+        super(context);
+        mParent = vp;
+        mInfo = p;
+        mData = data;
+        if(mParent != null) {
+            mParent.removeAllViews();
+            mParent.addView(this);
+        }
+    }
+
+
+
